@@ -1,25 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import React, {useState} from 'react';
+import mockShoes from './mockShoes';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home'
+import NotFound from './pages/NotFound'
+import ShoeEdit from './pages/ShoeEdit'
+import ShoeIndex from './pages/ShoeIndex'
+import ShoeNew from './pages/ShoeNew'
+import ShoeShow from './pages/ShoeShow'
 
-function App() {
+const App = () => {
+  const [shoes, setShoes] = useState(mockShoes)
+  console.log(shoes)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/*" element={<NotFound />}
+        />
+        <Route path="/shoeedit" element={<ShoeEdit />}
+        />
+        <Route path="/shoeindex" element={<ShoeIndex />}
+        />
+        <Route path="/shoenew" element={<ShoeNew />}
+        />
+        <Route path="/shoeshow" element={<ShoeShow />}
+        />
+      </Routes>
+      <Footer />
 
+    </>
+  )
+}
 export default App;
