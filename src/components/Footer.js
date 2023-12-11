@@ -1,49 +1,32 @@
-import React from 'react';
-import { Input, InputGroup,InputGroupText, InputGroupTextProps, } from 'reactstrap';
+import React, { useState } from 'react';
+import { Popover, PopoverBody, Button, PopoverHeader } from 'reactstrap';
+
 const Footer = () => {
+    const [clicked, setClicked] = useState(false)
+    
     return (
         <div>
-  <InputGroup>
-    <InputGroupText>
-      shoe id
-    </InputGroupText>
-    <Input placeholder="number" />
-  </InputGroup>
-  <br />
-  <InputGroup>
-    <InputGroupText>
-      <Input
-        addon
-        aria-label="Checkbox for following text input"
-        type="checkbox"
-      />
-    </InputGroupText>
-    <Input placeholder="Sneaker Name" />
-  </InputGroup>
-  <br />
-  <InputGroup>
-    <Input placeholder="email" />
-    <InputGroupText>
-      @example.com
-    </InputGroupText>
-  </InputGroup>
-  <br />
-  <InputGroup>
-    <InputGroupText>
-      $
-    </InputGroupText>
-    <InputGroupText>
-      $
-    </InputGroupText>
-    <Input placeholder />
-    <InputGroupText>
-      $
-    </InputGroupText>
-    <InputGroupText>
-      $
-    </InputGroupText>
-  </InputGroup>
-</div>
+            <Button onClick={() => setClicked(true)}
+            
+                id="Footer"
+                type="button"
+            >
+                Footer 
+            </Button>
+            {/* {clicked ? (Do something) : (else do something else)} */}
+            <Popover
+                placement="left"
+                target="Footer"
+                toggle={function noRefCheck(){}}
+            >
+                <PopoverHeader>
+                     Title
+                </PopoverHeader>
+                <PopoverBody>
+                    Body
+                </PopoverBody>
+            </Popover>
+        </div>
     )
 }
-export default Footer 
+export default Footer

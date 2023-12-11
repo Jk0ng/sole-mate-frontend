@@ -1,30 +1,34 @@
 import React from 'react';
-import {Nav, NavItem, NavLink} from 'reactstrap'
+import { Nav, NavItem } from 'reactstrap'
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <>
-            <Nav>
+        <header>
+            <Nav
+                justified
+                pills
+            >
                 <NavItem>
                     <NavLink
-                        active
-                        href="http://localhost:3000/"
-                    >
-                        HOME (WIP)
+                        to="/"
+                        >
+                            HOME
                     </NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink href="http://localhost:3000/shoeshow">
-                        Shoe (WIP)
+                    <NavLink to="/shoeshow">
+                        Shoe
                     </NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink href="http://localhost:3000/shoeedit">
-                        More Links (WIP)
+                    <NavLink to="/shoeedit">
+                        Edit a Shoe
                     </NavLink>
                 </NavItem>
             </Nav>
-        </>
+            Header
+        </header>
     )
 }
 export default Header 
