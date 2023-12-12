@@ -13,7 +13,10 @@ import ShoeShow from './pages/ShoeShow'
 
 const App = () => {
   const [shoes, setShoes] = useState(mockShoes)
-  console.log(shoes)
+  const createShoe = (shoe) => {
+    console.log(shoe)
+  }
+
 
   return (
     <>
@@ -26,7 +29,7 @@ const App = () => {
         />
         <Route path="/shoeindex" element={<ShoeIndex shoes={shoes} />}
         />
-        <Route path="/shoenew" element={<ShoeNew />}
+        <Route path="/shoenew" element={<ShoeNew createShoe={createShoe} />}
         />
         <Route path="/shoeshow/:id" element={<ShoeShow shoes={shoes} />}
         />
