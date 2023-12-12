@@ -1,5 +1,7 @@
 import React from 'react';
 import shoeLogo from "../assets/shoe-logo.jpg"
+
+
 const Home = () => {
     return (
         <div className='banner-section'>

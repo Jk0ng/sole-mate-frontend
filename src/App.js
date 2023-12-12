@@ -14,6 +14,7 @@ import ShoeShow from './pages/ShoeShow'
 const App = () => {
   const [shoes, setShoes] = useState(mockShoes)
   console.log(shoes)
+
   return (
     <>
       <Header />
@@ -23,11 +24,11 @@ const App = () => {
         />
         <Route path="/shoeedit" element={<ShoeEdit />}
         />
-        <Route path="/shoeindex" element={<ShoeIndex />}
+        <Route path="/shoeindex" element={<ShoeIndex shoes={shoes} />}
         />
         <Route path="/shoenew" element={<ShoeNew />}
         />
-        <Route path="/shoeshow" element={<ShoeShow />}
+        <Route path="/shoeshow/:id" element={<ShoeShow shoes={shoes} />}
         />
       </Routes>
       <Footer />
@@ -36,3 +37,4 @@ const App = () => {
   )
 }
 export default App;
+
