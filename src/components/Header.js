@@ -27,7 +27,6 @@ const Header = () => {
                     </NavLink>
                 </NavItem>
             </Nav>
-            Header
         </header>
     )
 }
