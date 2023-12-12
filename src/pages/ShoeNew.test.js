@@ -20,9 +20,6 @@ describe("<ShoeNew />", () => {
         const nameInput = screen.getByRole('textbox', {
             name: /name/i,
         })
-        // const ageInput = screen.getByRole('textbox', {
-        //     name: /age/ ,
-        // })
         const enjoysInput = screen.getByRole('textbox', {
             name: /enjoys/i,
         })
@@ -30,18 +27,15 @@ describe("<ShoeNew />", () => {
             name: /image/i,
         })
         expect(nameInput).toBeInTheDocument()
-        // expect(ageInput).toBeInTheDocument()
         expect(enjoysInput).toBeInTheDocument()
         expect(imageInput).toBeInTheDocument()
     })
     it("has a form with entries for name, age, enjoys, and image",()=>{
         renderNew()
         const formName = screen.getByText(/name/i)
-        // const formAge = screen.getByText("age")
         const formEnjoys = screen.getByText(/enjoys/i)
         const formImage = screen.getByText(/image/i)
         expect(formName.getAttribute("for")).toEqual("name")
-        // expect(formAge.getAttribute("for")).toEqual("age")
         expect(formEnjoys.getAttribute("for")).toEqual("enjoys")
         expect(formImage.getAttribute("for")).toEqual("image")
     })
@@ -50,12 +44,3 @@ describe("<ShoeNew />", () => {
 })
 
 
-// describe("<ShoeNew />", () => {
-//     it("renders without crashing", () => {
-//         render(
-//             <BrowserRouter>
-//                 <ShoeNew />
-//             </BrowserRouter>
-//         )
-//     })
-// })
