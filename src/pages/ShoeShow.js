@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, NavLink } from "react-router-dom";
 // LEARN THIS PORTION
 
 const ShoeShow = ({ shoes }) => {
@@ -12,7 +12,7 @@ const ShoeShow = ({ shoes }) => {
     <div>
       <main className="shoe-show-cards">
         <div className="Shoe-Title">
-            <h1>{currentShoe?.name}</h1>
+          <h1>{currentShoe?.name}</h1>
         </div>
 
         {/* Created a tenery condition in which if current shoe === current shoe and true, do something. In this case show an image */}
@@ -30,6 +30,10 @@ const ShoeShow = ({ shoes }) => {
         <h2>{currentShoe?.age}</h2>
         <h2>{currentShoe?.enjoys}</h2>
       </div>
+
+      <NavLink to={`/shoeedit/${currentShoe.id}`} className="nav-link">
+        Edit Shoe Profile
+      </NavLink>
     </div>
   );
 };
