@@ -1,6 +1,5 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
-import mockShoes from "./mockShoes";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { Routes, Route, json } from "react-router-dom";
