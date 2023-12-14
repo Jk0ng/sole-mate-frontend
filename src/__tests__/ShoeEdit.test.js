@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter, Route, Routes } from "react-router-dom";
-import ShoeEdit from "./ShoeEdit";
+import ShoeEdit from "../pages/ShoeEdit";
 import mockShoes from "../mockShoes";
 
 describe("<ShoeEdit />", () => {

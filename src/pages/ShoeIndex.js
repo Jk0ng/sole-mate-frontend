@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Card, CardBody, CardTitle, CardSubtitle, Button } from "reactstrap";
 import { NavLink } from "react-router-dom";
+import "../App.css"
+
 
 // As a user, I can see a page that lists of all the cat names.
 // As a user, I can see a page featuring all the information for one cat.
@@ -8,7 +10,7 @@ import { NavLink } from "react-router-dom";
 
 const ShoeIndex = ({ shoes }) => {
   return (
-    <div>
+    <div className="counters">
       <>
         {shoes?.map((shoe, index) => {
           return (
