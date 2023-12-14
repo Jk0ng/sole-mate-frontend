@@ -9,7 +9,9 @@ import ShoeEdit from "./pages/ShoeEdit";
 import ShoeIndex from "./pages/ShoeIndex";
 import ShoeNew from "./pages/ShoeNew";
 import ShoeShow from "./pages/ShoeShow";
-
+import './pages/Home.css'
+import './components/Footer.css'
+import './components/Header.css'
 
 const App = () => {
   const [shoes, setShoes] = useState([]);

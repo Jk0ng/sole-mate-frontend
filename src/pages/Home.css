@@ -1,0 +1,31 @@
+.Home-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.Home-title {
+    display: flex;
+    justify-content: center;
+}
+
+
+.shoe-logo {
+    justify-content: center;
+    width: 50vw; 
+    height: 70vh;
+}
+
+
+.carousel-image {
+    width: 100%;
+    height: 550px; 
+    object-fit: cover;
+}
+
+.Carousel-text{
+    font-size: 50px;
+    font-weight: bolder;
+    color: orange;
+}
