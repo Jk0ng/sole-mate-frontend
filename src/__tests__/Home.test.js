@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react"
 import { BrowserRouter } from 'react-router-dom';
-import Home from "./Home"
+import Home from "../pages/Home"
 import Header from "../components/Header";
 
 describe("<Home />", () => {

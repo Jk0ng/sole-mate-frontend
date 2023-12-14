@@ -13,17 +13,17 @@ const Header = () => {
                     <NavLink
                         to="/"
                         >
-                            HOME
+                            Home
                     </NavLink>
                 </NavItem>
                 <NavItem>
                     <NavLink to="/shoeindex">
-                        Shoe
+                        Show Kicks
                     </NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink to="/shoeedit">
-                        Edit a Shoe
+                    <NavLink to="/shoenew">
+                        Add Your Solemate
                     </NavLink>
                 </NavItem>
             </Nav>

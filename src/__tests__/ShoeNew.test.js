@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react"
 import { BrowserRouter } from "react-router-dom"
-import ShoeNew from "./ShoeNew"
+import ShoeNew from "../pages/ShoeNew"
 import { toBeInTheDocument } from "@testing-library/jest-dom/matchers"
 
 describe("<ShoeNew />", () => {

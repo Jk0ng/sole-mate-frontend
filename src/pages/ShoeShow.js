@@ -1,8 +1,9 @@
 import React from "react";
 import { useParams, NavLink } from "react-router-dom";
+import { Button } from "reactstrap";
 // LEARN THIS PORTION
 
-const ShoeShow = ({ shoes }) => {
+const ShoeShow = ({ shoes, deleteShoe }) => {
   // Creating a function that takes in an ID as parameters and returns the id info
   const { id } = useParams();
 
@@ -32,7 +33,14 @@ const ShoeShow = ({ shoes }) => {
       </div>
 
       <NavLink to={`/shoeedit/${currentShoe.id}`} className="nav-link">
-        Edit Shoe Profile
+        <Button>
+          Edit Shoe Profile
+        </Button>
+      </NavLink>
+      <NavLink to={"/shoeindex"}>
+        <Button onClick={() => deleteShoe(currentShoe.id)}>
+          Delete
+        </Button>
       </NavLink>
     </div>
   );

@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import ShoeShow from './ShoeShow'
+import ShoeShow from '../pages/ShoeShow'
 import { BrowserRouter } from 'react-router-dom';
 import mockShoes from '../mockShoes';
 
