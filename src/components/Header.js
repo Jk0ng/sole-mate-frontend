@@ -4,26 +4,28 @@ import { NavLink } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <header>
+        <header className='Header-content'>
             <Nav
                 justified
                 pills
             >
-                <NavItem>
+                <NavItem className='Space'>
                     <NavLink
                         to="/"
-                        >
-                            Home
+                        className='Nav-title'>
+                            |   Home   |
                     </NavLink>
                 </NavItem>
-                <NavItem>
-                    <NavLink to="/shoeindex">
-                        Show Kicks
+                <NavItem className='Space'>
+                    <NavLink to="/shoeindex"
+                    className='Nav-title'>
+                        |  Show Kicks   |
                     </NavLink>
                 </NavItem>
-                <NavItem>
-                    <NavLink to="/shoenew">
-                        Add Your Solemate
+                <NavItem className='Space'>
+                    <NavLink to="/shoenew"
+                    className='Nav-title'>
+                        |  Add Your Solemate  |
                     </NavLink>
                 </NavItem>
             </Nav>
