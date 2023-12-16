@@ -25,7 +25,9 @@
 }
 
 .Carousel-text{
-    font-size: 50px;
+    font-size: 95px;
     font-weight: bolder;
     color: orange;
+    position:absolute;
+    top:25%
 }

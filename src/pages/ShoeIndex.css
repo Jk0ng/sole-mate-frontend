@@ -1,0 +1,13 @@
+.button:hover {
+    background-color: gray;
+}
+
+.card{
+    transition: transform .2s;
+}
+
+.card:hover {
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}

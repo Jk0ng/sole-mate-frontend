@@ -12,6 +12,7 @@ import ShoeShow from "./pages/ShoeShow";
 import './pages/Home.css'
 import './components/Footer.css'
 import './components/Header.css'
+import './pages/ShoeNew.css'
 
 const App = () => {
   const [shoes, setShoes] = useState([]);

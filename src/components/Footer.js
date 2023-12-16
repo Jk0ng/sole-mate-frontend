@@ -18,7 +18,7 @@ const Footer = () => {
         </li>
         <li>
             Connect with Samuel 
-          <a href="www.linkedin.com/in/slabrutte" target="_blank" className="IconLink">
+          <a href="https://www.linkedin.com/in/slabrutte" target="_blank" className="IconLink">
           <img src={LinkedInLogo} alt='LinkedInLogo' className="LinkedInLogo" />
           </a>
         </li>
