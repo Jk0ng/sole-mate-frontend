@@ -1,0 +1,9 @@
+.background{
+    margin-left: 10%;
+    background-color: gray;
+    border-style: groove;
+}
+.labelName{
+    font-weight:800;
+    color:black;
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams, NavLink } from "react-router-dom";
 import { Button } from "reactstrap";
+import "./ShoeShow.css"
 // LEARN THIS PORTION
 
 const ShoeShow = ({ shoes, deleteShoe }) => {
@@ -10,7 +11,7 @@ const ShoeShow = ({ shoes, deleteShoe }) => {
   // What does this do?
   let currentShoe = shoes?.find((shoe) => shoe.id === +id);
   return (
-    <div>
+    <div className="containers">
       <main className="shoe-show-cards">
         <div className="Shoe-Title">
           <h1>{currentShoe?.name}</h1>
@@ -28,17 +29,17 @@ const ShoeShow = ({ shoes, deleteShoe }) => {
         )}
       </main>
       <div className="Shoe-footer-age">
-        <h2>{currentShoe?.age}</h2>
-        <h2>{currentShoe?.enjoys}</h2>
+        <h2>PRICE:${currentShoe?.age}</h2>
+        <h2>BEST AT {currentShoe?.enjoys}</h2>
       </div>
 
-      <NavLink to={`/shoeedit/${currentShoe.id}`} className="nav-link">
+      <NavLink to={`/shoeedit/${currentShoe?.id}`} className="nav-link">
         <Button>
           Edit Shoe Profile
         </Button>
       </NavLink>
       <NavLink to={"/shoeindex"}>
-        <Button onClick={() => deleteShoe(currentShoe.id)}>
+        <Button onClick={() => deleteShoe(currentShoe?.id)}>
           Delete
         </Button>
       </NavLink>

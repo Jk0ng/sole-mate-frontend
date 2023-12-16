@@ -1,7 +1,7 @@
     import React, { useState } from "react";
     import { useParams, useNavigate } from "react-router-dom";
     import { Button, Form, FormGroup, Label, Input } from "reactstrap";
-
+    import "./ShoeEdit.css"
 
 
     const ShoeEdit = ({ shoes, updateShoe }) => {
@@ -13,10 +13,10 @@
 
 
         const [editShoe, setEditShoe] = useState({
-            name: currentShoe.name,
-            age: currentShoe.age,
-            enjoys: currentShoe.enjoys,
-            image: currentShoe.image
+            name: currentShoe?.name,
+            age: currentShoe?.age,
+            enjoys: currentShoe?.enjoys,
+            image: currentShoe?.image
         })
 
         const handleChange = (e) => {
@@ -28,10 +28,10 @@
             navigate("/shoeindex")
         }
     return (
-        <div>
+        <div className="background">
         <Form>
             <FormGroup>
-            <Label for="name">Name</Label>
+            <Label for="name" className="labelName">Name</Label>
             <Input 
                 id="name"
                 name="name" 
@@ -44,7 +44,7 @@
         </Form>
         <Form>
             <FormGroup>
-            <Label for="age">Age</Label>
+            <Label for="age" className="labelName">Price$</Label>
             <Input
                 id="age"
                 name="age"
@@ -57,7 +57,7 @@
         </Form>
         <Form>
             <FormGroup>
-            <Label for="enjoys">Enjoys</Label>
+            <Label for="enjoys" className="labelName">Enjoys</Label>
             <Input
                 id="enjoys"
                 name="enjoys"
@@ -70,7 +70,7 @@
         </Form>
         <Form>
             <FormGroup>
-            <Label for="image">Image</Label>
+            <Label for="image" className="labelName">Image</Label>
             <Input
                 id="image"
                 name="image"

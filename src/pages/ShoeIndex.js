@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Card, CardBody, CardTitle, CardSubtitle, Button } from "reactstrap";
 import { NavLink } from "react-router-dom";
 import "../App.css"
+import './ShoeIndex.css'
 
 
 // As a user, I can see a page that lists of all the cat names.
@@ -14,7 +15,8 @@ const ShoeIndex = ({ shoes }) => {
       <>
         {shoes?.map((shoe, index) => {
           return (
-            <Card
+           
+            <Card 
               style={{
                 width: "14rem",
               }}
@@ -23,15 +25,17 @@ const ShoeIndex = ({ shoes }) => {
               <img
                 alt={`profile of a cat named ${shoe.name}`}
                 src={shoe.image}
+                
               />
               <CardBody>
-                <CardTitle tag="h5">{shoe.name}</CardTitle>
+                <CardTitle tag="h3">{shoe.name}</CardTitle>
                 <CardSubtitle className="mb-2 text-muted" tag="h6">
-                  Age: {shoe.age}
+                  Price: ${shoe.age}
                 </CardSubtitle>
-                <button><NavLink to={`/shoeshow/${shoe.id}`} className="nav-link">See More Details</NavLink></button>
+                <button className="button"><NavLink to={`/shoeshow/${shoe.id}`} className="nav-link">See More Details</NavLink></button>
               </CardBody>
             </Card>
+            
           )
         })}
       </>

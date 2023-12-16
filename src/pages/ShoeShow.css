@@ -1,0 +1,17 @@
+.containers{
+    display: flex;
+    display:inline
+}
+.shoe-show-img{
+    width:70%;
+    height:auto;
+    margin-left:15%;
+    display:flex;
+    justify-content: center
+}
+.Shoe-footer-age{
+    margin-left: 5%
+}
+.Shoe-Title{
+    margin-left: 5%
+}
